@@ -189,7 +189,8 @@ export default class SideMenu extends React.Component {
     const offsetLeft = this.menuPositionMultiplier() *
       (this.state.left.__getValue() + gestureState.dx);
 
-    this.openMenu(shouldOpenMenu(offsetLeft));
+    //this.openMenu(shouldOpenMenu(offsetLeft));
+    this.openMenu((gestureState.dx>0?true:false));
   }
 
   handleMoveShouldSetPanResponder(e: any, gestureState: any): boolean {
